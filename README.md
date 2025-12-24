@@ -1,4 +1,4 @@
-# 🖼️ Auto-Image-Caption - AI-Powered Image Description Generator
+#Auto-Image-Caption - AI-Powered Image Description Generator
 
 > **Transform your images into searchable, organized masterpieces!** 📸
 
@@ -10,13 +10,13 @@ Perfect for photographers, digital archivists, content creators, or anyone drown
 
 ## Features
 
-- 🤖 **AI-Powered Descriptions** - Leverages Mistral's state-of-the-art vision model to generate detailed, natural-language descriptions
-- 📝 **Metadata Embedding** - Automatically embeds descriptions into image EXIF/metadata (supports JPEG, PNG, WebP)
-- 📊 **Automatic Logging** - Every processing run is logged with timestamps—track what you've processed and when!
-- 🔍 **Metadata Verification** - Use `check_metadata.py` to verify descriptions were successfully added
-- 🔒 **Secure Configuration** - API keys stored safely in `.env` files (never committed to version control)
-- ⚡ **One-Click Execution** - Just double-click `run.bat` and let the magic happen!
-- 🎯 **Multiple Format Support** - Works with `.jpg`, `.jpeg`, `.png`, and `.webp` files
+-  **AI-Powered Descriptions** - Leverages Mistral's state-of-the-art vision model to generate detailed, natural-language descriptions
+-  **Metadata Embedding** - Automatically embeds descriptions into image EXIF/metadata (supports JPEG, PNG, WebP)
+-  **Automatic Logging** - Every processing run is logged with timestamps—track what you've processed and when!
+-  **Metadata Verification** - Use `check_metadata.py` to verify descriptions were successfully added
+-  **Secure Configuration** - API keys stored safely in `.env` files (never committed to version control)
+-  **One-Click Execution** - Just double-click `run.bat` and let the magic happen!
+-  **Multiple Format Support** - Works with `.jpg`, `.jpeg`, `.png`, and `.webp` files
 
 ---
 
