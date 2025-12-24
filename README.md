@@ -4,7 +4,7 @@
 
 We’ve all been there: scrolling through a folder of 500 images titled "IMG_8432," trying to remember which one was from that specific shoot or vacation. It’s a mess, and let’s be honest—no one has the time to manually tag every single photo.
 
-I built (or "Check out") Auto-Image-Caption to solve exactly that. It uses Mistral’s Vision AI to "look" at your photos and write detailed descriptions directly into the metadata. It makes your library searchable and organized without you having to lift a finger. Your future self will definitely thank you for this one.
+I built Auto-Image-Caption to solve exactly that. It uses Mistral’s Vision AI to "look" at your photos and write detailed descriptions directly into the metadata. It makes your library searchable and organized without you having to lift a finger. Your future self will definitely thank you for this one.
 
 ---
 
