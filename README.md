@@ -1,4 +1,4 @@
-#Auto-Image-Caption - AI-Powered Image Description Generator
+# Auto-Image-Caption - AI-Powered Image Description Generator
 
 > **Transform your images into searchable, organized masterpieces!** 📸
 
