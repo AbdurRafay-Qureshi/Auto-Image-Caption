@@ -31,7 +31,7 @@ Perfect for photographers, digital archivists, content creators, or anyone drown
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/yourusername/Auto-Image-Caption.git
+   https://github.com/AbdurRafay-Qureshi/Auto-Image-Caption.git
    cd Auto-Image-Caption
    ```
 
@@ -51,7 +51,7 @@ Perfect for photographers, digital archivists, content creators, or anyone drown
 
 3. **Install dependencies & run:**
    
-   Just double-click `run.bat` - it handles everything! 🎉
+   Just double-click `requirements.bat` for installing libraries and then double click `run.bat` - it handles everything!
    
    Or manually:
    ```bash
@@ -59,7 +59,7 @@ Perfect for photographers, digital archivists, content creators, or anyone drown
    python main.py
    ```
 
-That's it! Your images will be processed, descriptions will be embedded, and everything will be logged. ☕
+That's it! Your images will be processed, descriptions will be embedded, and everything will be logged.
 
 ---
 
@@ -85,13 +85,13 @@ Auto-Image-Caption/
 
 ---
 
-## 🛠️ How It Works
+## How It Works
 
 1. **Image Discovery** - Scans the `images/` folder for supported file types
 2. **AI Processing** - Sends each image to Mistral Vision API for analysis
 3. **Description Generation** - Receives detailed, natural-language descriptions
 4. **Metadata Embedding** - Embeds descriptions into image metadata
-5. **Logging** - Saves a timestamped log of all operations to `logs/` folder
+5. **Logging** - Saves log of all operations to `logs/` folder just in case.
 
 All output is displayed in your terminal **and** saved to log files for future reference!
 
@@ -103,12 +103,14 @@ All output is displayed in your terminal **and** saved to log files for future r
 ```bash
 python main.py
 ```
+Or double-click run.bat
 
 ### Check Metadata
 Verify that descriptions were successfully embedded:
 ```bash
 python check_metadata.py
 ```
+Or just double-click metadata_checker.bat. It'll check whether the description been added to pictures metadata.
 
 ### View Logs
 All logs are saved in `logs/` folder with timestamps:
