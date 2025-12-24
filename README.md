@@ -1,14 +1,14 @@
 # 🖼️ Auto-Image-Caption - AI-Powered Image Description Generator
 
-> **Transform your images into searchable, organized masterpieces!** 📸✨
+> **Transform your images into searchable, organized masterpieces!** 📸
 
-Ever stared at a folder full of images and thought, *"What was this photo about again?"* 🤔 Say goodbye to the guessing game! Auto-Image-Caption uses the power of **Mistral's Vision AI** to automatically generate detailed descriptions for your images and embeds them directly into the metadata. Talk, search, and organize your photos like a pro—all with zero manual effort!
+Ever stared at a folder full of images and thought, *"What was this photo about again?"* Say goodbye to the guessing game! Auto-Image-Caption uses the power of **Mistral's Vision AI** to automatically generate detailed descriptions for your images and embeds them directly into the metadata. Talk, search, and organize your photos like a pro—all with zero manual effort!
 
-Perfect for photographers, digital archivists, content creators, or anyone drowning in a sea of unnamed images. Your future self will thank you. 🙏
+Perfect for photographers, digital archivists, content creators, or anyone drowning in a sea of unnamed images. Your future self will thank you.
 
 ---
 
-## ✨ Features
+## Features
 
 - 🤖 **AI-Powered Descriptions** - Leverages Mistral's state-of-the-art vision model to generate detailed, natural-language descriptions
 - 📝 **Metadata Embedding** - Automatically embeds descriptions into image EXIF/metadata (supports JPEG, PNG, WebP)
@@ -20,7 +20,7 @@ Perfect for photographers, digital archivists, content creators, or anyone drown
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -63,7 +63,7 @@ That's it! Your images will be processed, descriptions will be embedded, and eve
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Auto-Image-Caption/
@@ -97,7 +97,7 @@ All output is displayed in your terminal **and** saved to log files for future r
 
 ---
 
-## 📝 Usage Examples
+## Usage Examples
 
 ### Process Images
 ```bash
@@ -121,7 +121,7 @@ logs/
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 All configuration is done through the `.env` file:
 
@@ -135,7 +135,7 @@ The `logs/` folder location is hardcoded to the project directory and created au
 
 ---
 
-## 🖼️ Supported Image Formats
+## Supported Image Formats
 
 | Format | Extension | Metadata Method |
 |--------|-----------|-----------------|
@@ -143,18 +143,9 @@ The `logs/` folder location is hardcoded to the project directory and created au
 | **PNG** | `.png` | PNG text chunks |
 | **WebP** | `.webp` | EXIF metadata |
 | **Others** | Any | Sidecar `.txt` files |
-
 ---
 
-## 🔒 Security Notes
-
-- ⚠️ **Never commit your `.env` file** - It contains your API key!
-- ✅ The `.gitignore` is pre-configured to exclude `.env` and `logs/`
-- ✅ Use `.env.example` as a template for other contributors
-
----
-
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### "MISTRAL_API_KEY not found in environment variables"
 → Make sure you've created a `.env` file and added your API key.
@@ -167,35 +158,21 @@ The `logs/` folder location is hardcoded to the project directory and created au
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Feel free to:
-- 🐛 Report bugs
-- 💡 Suggest new features
-- 🔧 Submit pull requests
+- Report bugs
+- Suggest new features
+- Submit pull requests
 
 ---
 
-## 📜 License
+## License
 
 This project is open source and available under the MIT License.
 
 ---
 
-## 🙏 Acknowledgments
-
-- **Mistral AI** for their incredible vision model
-- **PIL/Pillow** for image processing capabilities
-- **piexif** for EXIF metadata handling
-
----
-
-## 💬 Questions or Issues?
-
-Open an issue on GitHub or reach out! Happy organizing! 🎉📸
-
----
 
 <div align="center">
-Made with ❤️ and AI magic ✨
 </div>
