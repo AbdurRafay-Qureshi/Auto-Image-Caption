@@ -2,21 +2,20 @@
 
 > **Transform your images into searchable, organized masterpieces!** 📸
 
-Ever stared at a folder full of images and thought, *"What was this photo about again?"* Say goodbye to the guessing game! Auto-Image-Caption uses the power of **Mistral's Vision AI** to automatically generate detailed descriptions for your images and embeds them directly into the metadata. Talk, search, and organize your photos like a pro—all with zero manual effort!
+We’ve all been there: scrolling through a folder of 500 images titled "IMG_8432," trying to remember which one was from that specific shoot or vacation. It’s a mess, and let’s be honest—no one has the time to manually tag every single photo.
 
-Perfect for photographers, digital archivists, content creators, or anyone drowning in a sea of unnamed images. Your future self will thank you.
+I built (or "Check out") Auto-Image-Caption to solve exactly that. It uses Mistral’s Vision AI to "look" at your photos and write detailed descriptions directly into the metadata. It makes your library searchable and organized without you having to lift a finger. Your future self will definitely thank you for this one.
 
 ---
 
 ## Features
 
--  **AI-Powered Descriptions** - Leverages Mistral's state-of-the-art vision model to generate detailed, natural-language descriptions
--  **Metadata Embedding** - Automatically embeds descriptions into image EXIF/metadata (supports JPEG, PNG, WebP)
--  **Automatic Logging** - Every processing run is logged with timestamps—track what you've processed and when!
--  **Metadata Verification** - Use `check_metadata.py` to verify descriptions were successfully added
--  **Secure Configuration** - API keys stored safely in `.env` files (never committed to version control)
+-  **AI-Powered Descriptions** - Uses Mistral’s Vision AI to actually "see" your photos and describe them in plain English. No more generic tags; you get real context.
+-  **Metadata Embedding** - Descriptions are baked directly into the image files (EXIF/metadata). It works seamlessly with JPEGs, PNGs, and WebPs, so the info stays with the photo wherever it goes.
+-  **Automatic Logging** - Every run is timestamped and logged. You’ll always know exactly which folders you’ve already tackled and when.
+-  **Metadata Verification** - Includes a handy `check_metadata.bat` script so you can double-check that your descriptions were saved correctly without opening every file.
 -  **One-Click Execution** - Just double-click `run.bat` and let the magic happen!
--  **Multiple Format Support** - Works with `.jpg`, `.jpeg`, `.png`, and `.webp` files
+-  **Multiple Format Support** - Whether your library is full of `.jpg`, `.jpeg`, `.png`, or `.webp`, we’ve got you covered.
 
 ---
 
