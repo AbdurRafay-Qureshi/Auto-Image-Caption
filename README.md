@@ -151,14 +151,6 @@ The `logs/` folder location is hardcoded to the project directory and created au
 
 ---
 
-## 🔒 Security Notes
-
-- ⚠️ **Never commit your `.env` file** - It contains your API key!
-- ✅ The `.gitignore` is pre-configured to exclude `.env` and `logs/`
-- ✅ Use `.env.example` as a template for other contributors
-
----
-
 ## 🐛 Troubleshooting
 
 ### "MISTRAL_API_KEY not found in environment variables"
@@ -172,16 +164,6 @@ The `logs/` folder location is hardcoded to the project directory and created au
 
 ### HTTP 429 (Rate limit exceeded)
 → This usually happens when image payloads are large or requests are sent too quickly. This app downsizes/compresses images before upload; if you still see 429, lower `MISTRAL_IMAGE_MAX_SIDE` / `MISTRAL_IMAGE_QUALITY` and increase `MISTRAL_MAX_RETRIES` / `MISTRAL_RETRY_DELAY_SECONDS`.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- 🐛 Report bugs
-- 💡 Suggest new features
-- 🔧 Submit pull requests
-
 ---
 
 ## 📜 License
@@ -189,21 +171,3 @@ Contributions are welcome! Feel free to:
 This project is open source and available under the MIT License.
 
 ---
-
-## 🙏 Acknowledgments
-
-- **Mistral AI** for their incredible vision model
-- **PIL/Pillow** for image processing capabilities
-- **piexif** for EXIF metadata handling
-
----
-
-## 💬 Questions or Issues?
-
-Open an issue on GitHub or reach out! Happy organizing! 🎉📸
-
----
-
-<div align="center">
-Made with ❤️ and AI magic ✨
-</div>
