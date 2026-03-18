@@ -1,25 +1,26 @@
-# Auto-Image-Caption - AI-Powered Image Description Generator
+# 🖼️ Auto-Image-Caption - AI-Powered Image Description Generator
 
-> **Transform your images into searchable, organized masterpieces!** 📸
+> **Transform your images into searchable, organized masterpieces!** 📸✨
 
-We’ve all been there: scrolling through a folder of 500 images titled "IMG_8432," trying to remember which one was from that specific shoot or vacation. It’s a mess, and let’s be honest—no one has the time to manually tag every single photo.
+Ever stared at a folder full of images and thought, *"What was this photo about again?"* 🤔 Say goodbye to the guessing game! Auto-Image-Caption uses the power of **Mistral's Vision AI** to automatically generate detailed descriptions for your images and embeds them directly into the metadata. Talk, search, and organize your photos like a pro—all with zero manual effort!
 
-I built Auto-Image-Caption to solve exactly that. It uses Mistral’s Vision AI to "look" at your photos and write detailed descriptions directly into the metadata. It makes your library searchable and organized without you having to lift a finger. Your future self will definitely thank you for this one.
-
----
-
-## Features
-
--  **AI-Powered Descriptions** - Uses Mistral’s Vision AI to actually "see" your photos and describe them in plain English. No more generic tags; you get real context.
--  **Metadata Embedding** - Descriptions are baked directly into the image files (EXIF/metadata). It works seamlessly with JPEGs, PNGs, and WebPs, so the info stays with the photo wherever it goes.
--  **Automatic Logging** - Every run is timestamped and logged. You’ll always know exactly which folders you’ve already tackled and when.
--  **Metadata Verification** - Includes a handy `check_metadata.bat` script so you can double-check that your descriptions were saved correctly without opening every file.
--  **One-Click Execution** - Just double-click `run.bat` and let the magic happen!
--  **Multiple Format Support** - Whether your library is full of `.jpg`, `.jpeg`, `.png`, or `.webp`, we’ve got you covered.
+Perfect for photographers, digital archivists, content creators, or anyone drowning in a sea of unnamed images. Your future self will thank you. 🙏
 
 ---
 
-## Quick Start
+## ✨ Features
+
+- 🤖 **AI-Powered Descriptions** - Leverages Mistral's state-of-the-art vision model to generate detailed, natural-language descriptions
+- 📝 **Metadata Embedding** - Automatically embeds descriptions into image EXIF/metadata (supports JPEG, PNG, WebP)
+- 📊 **Automatic Logging** - Every processing run is logged with timestamps—track what you've processed and when!
+- 🔍 **Metadata Verification** - Use `check_metadata.py` to verify descriptions were successfully added
+- 🔒 **Secure Configuration** - API keys stored safely in `.env` files (never committed to version control)
+- ⚡ **One-Click Execution** - Just double-click `run.bat` and let the magic happen!
+- 🎯 **Multiple Format Support** - Works with `.jpg`, `.jpeg`, `.png`, and `.webp` files
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
@@ -30,7 +31,7 @@ I built Auto-Image-Caption to solve exactly that. It uses Mistral’s Vision AI 
 
 1. **Clone this repository:**
    ```bash
-   https://github.com/AbdurRafay-Qureshi/Auto-Image-Caption.git
+   git clone https://github.com/yourusername/Auto-Image-Caption.git
    cd Auto-Image-Caption
    ```
 
@@ -50,7 +51,7 @@ I built Auto-Image-Caption to solve exactly that. It uses Mistral’s Vision AI 
 
 3. **Install dependencies & run:**
    
-   Just double-click `requirements.bat` for installing libraries and then double click `run.bat` - it handles everything!
+   Just double-click `run.bat` - it handles everything! 🎉
    
    Or manually:
    ```bash
@@ -58,11 +59,11 @@ I built Auto-Image-Caption to solve exactly that. It uses Mistral’s Vision AI 
    python main.py
    ```
 
-That's it! Your images will be processed, descriptions will be embedded, and everything will be logged.
+That's it! Your images will be processed, descriptions will be embedded, and everything will be logged. ☕
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 Auto-Image-Caption/
@@ -84,32 +85,30 @@ Auto-Image-Caption/
 
 ---
 
-## How It Works
+## 🛠️ How It Works
 
 1. **Image Discovery** - Scans the `images/` folder for supported file types
 2. **AI Processing** - Sends each image to Mistral Vision API for analysis
 3. **Description Generation** - Receives detailed, natural-language descriptions
 4. **Metadata Embedding** - Embeds descriptions into image metadata
-5. **Logging** - Saves log of all operations to `logs/` folder just in case.
+5. **Logging** - Saves a timestamped log of all operations to `logs/` folder
 
 All output is displayed in your terminal **and** saved to log files for future reference!
 
 ---
 
-## Usage Examples
+## 📝 Usage Examples
 
 ### Process Images
 ```bash
 python main.py
 ```
-Or double-click run.bat
 
 ### Check Metadata
 Verify that descriptions were successfully embedded:
 ```bash
 python check_metadata.py
 ```
-Or just double-click metadata_checker.bat. It'll check whether the description been added to pictures metadata.
 
 ### View Logs
 All logs are saved in `logs/` folder with timestamps:
@@ -122,7 +121,7 @@ logs/
 
 ---
 
-## Configuration
+## 🔧 Configuration
 
 All configuration is done through the `.env` file:
 
@@ -131,12 +130,17 @@ All configuration is done through the `.env` file:
 | `MISTRAL_API_KEY` | Your Mistral API key (required) | `IK1E2yeSqM8cYA0mHw...` |
 | `MISTRAL_MODEL` | Mistral model to use | `mistral-small-latest` |
 | `IMAGE_FOLDER` | Path to your images folder | `C:/Users/you/Pictures` |
+| `MISTRAL_IMAGE_MAX_SIDE` | Downscale images before upload to reduce rate limiting / token usage | `1024` |
+| `MISTRAL_IMAGE_QUALITY` | JPEG quality used after resizing (higher = bigger payload) | `85` |
+| `MISTRAL_MAX_RETRIES` | How many times to retry on HTTP 429 (rate limited) per image | `3` |
+| `MISTRAL_RETRY_DELAY_SECONDS` | Base delay (seconds) before retrying after 429 | `2` |
+| `MISTRAL_MIN_SECONDS_BETWEEN_REQUESTS` | Optional throttle between requests to be nice to the API | `0` |
 
 The `logs/` folder location is hardcoded to the project directory and created automatically at runtime.
 
 ---
 
-## Supported Image Formats
+## 🖼️ Supported Image Formats
 
 | Format | Extension | Metadata Method |
 |--------|-----------|-----------------|
@@ -144,9 +148,18 @@ The `logs/` folder location is hardcoded to the project directory and created au
 | **PNG** | `.png` | PNG text chunks |
 | **WebP** | `.webp` | EXIF metadata |
 | **Others** | Any | Sidecar `.txt` files |
+
 ---
 
-## Troubleshooting
+## 🔒 Security Notes
+
+- ⚠️ **Never commit your `.env` file** - It contains your API key!
+- ✅ The `.gitignore` is pre-configured to exclude `.env` and `logs/`
+- ✅ Use `.env.example` as a template for other contributors
+
+---
+
+## 🐛 Troubleshooting
 
 ### "MISTRAL_API_KEY not found in environment variables"
 → Make sure you've created a `.env` file and added your API key.
@@ -157,23 +170,40 @@ The `logs/` folder location is hardcoded to the project directory and created au
 ### Images not getting descriptions
 → Verify your Mistral API key is valid and has credits remaining.
 
+### HTTP 429 (Rate limit exceeded)
+→ This usually happens when image payloads are large or requests are sent too quickly. This app downsizes/compresses images before upload; if you still see 429, lower `MISTRAL_IMAGE_MAX_SIDE` / `MISTRAL_IMAGE_QUALITY` and increase `MISTRAL_MAX_RETRIES` / `MISTRAL_RETRY_DELAY_SECONDS`.
+
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
-- Report bugs
-- Suggest new features
-- Submit pull requests
+- 🐛 Report bugs
+- 💡 Suggest new features
+- 🔧 Submit pull requests
 
 ---
 
-## License
+## 📜 License
 
 This project is open source and available under the MIT License.
 
 ---
 
+## 🙏 Acknowledgments
+
+- **Mistral AI** for their incredible vision model
+- **PIL/Pillow** for image processing capabilities
+- **piexif** for EXIF metadata handling
+
+---
+
+## 💬 Questions or Issues?
+
+Open an issue on GitHub or reach out! Happy organizing! 🎉📸
+
+---
 
 <div align="center">
+Made with ❤️ and AI magic ✨
 </div>

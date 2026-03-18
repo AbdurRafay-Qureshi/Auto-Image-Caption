@@ -100,7 +100,8 @@ def process_images(image_folder=IMAGE_FOLDER):
             print()
             
         except Exception as e:
-            print(f"  ✗ Error processing {filename}: {e}\n")
+            # Keep output ASCII-only to avoid Windows console encoding crashes.
+            print(f"  X Error processing {filename}: {e}\n")
     
     print("\nProcessing complete!")
 

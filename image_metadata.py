@@ -31,7 +31,7 @@ class ImageMetadataHandler:
                 exif_dict = img.getexif()
                 exif_dict[270] = description  # EXIF tag 270 = ImageDescription
                 img.save(image_path, exif=exif_dict, quality=95)
-                print(f"✓ Updated (EXIF): {image_path}")
+                print(f"Updated (EXIF): {image_path}")
                 
             elif file_ext == '.png':
                 # PNG: Use PNG text chunks
@@ -47,26 +47,26 @@ class ImageMetadataHandler:
                 metadata.add_text("ImageDescription", description)
                 
                 img.save(image_path, pnginfo=metadata, optimize=True)
-                print(f"✓ Updated (PNG): {image_path}")
+                print(f"Updated (PNG): {image_path}")
                 
             elif file_ext == '.webp':
                 # WebP: Use EXIF metadata
                 exif_dict = img.getexif()
                 exif_dict[270] = description
                 img.save(image_path, exif=exif_dict, quality=95)
-                print(f"✓ Updated (WebP): {image_path}")
+                print(f"Updated (WebP): {image_path}")
                 
             else:
                 # For other formats, save as a sidecar text file
                 sidecar_path = f"{image_path}.description.txt"
                 with open(sidecar_path, 'w', encoding='utf-8') as f:
                     f.write(description)
-                print(f"✓ Updated (sidecar): {sidecar_path}")
+                print(f"Updated (sidecar): {sidecar_path}")
             
             return True
             
         except Exception as e:
-            print(f"✗ Error updating {image_path}: {e}")
+            print(f"X Error updating {image_path}: {e}")
             return False
     
     @staticmethod
@@ -105,5 +105,5 @@ class ImageMetadataHandler:
                 return ""
                 
         except Exception as e:
-            print(f"✗ Error reading {image_path}: {e}")
+            print(f"X Error reading {image_path}: {e}")
             return ""
